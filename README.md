@@ -6,6 +6,7 @@ In his own words from the WeAreDevelopers Conference 2024 - Nota is not meant to
 Nota uses its own string encoding [KIM](https://www.crockford.com/kim.html), instead of UTF-8. 
 Nota also has its own format for floating point numbers called [DEC64](https://www.crockford.com/dec64.html).
 Converting an IEEE754 float to DEC64 representation is surprisingly difficult to perform lossless.
+[Here](https://www.reddit.com/r/programming/comments/28r8xt/dec64_is_intended_to_be_the_only_number_type_in/) is an interesting thread about DEC64.
 
 Nota's design is based on the concept of a continuation bit at the beginning of every byte.
 This would prevent a decoder of skipping over most datatypes like text, arrays and records without parsing them.
